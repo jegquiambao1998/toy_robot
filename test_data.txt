@@ -1,0 +1,43 @@
+1.)
+PLACE 0,0,NORTH
+MOVE
+RIGHT
+MOVE
+LEFT
+MOVE
+RIGHT
+MOVE
+LEFT
+MOVE
+RIGHT
+MOVE
+LEFT
+MOVE
+RIGHT
+MOVE
+LEFT
+REPORT
+Expected Output: 4,4,NORTH
+
+2.)
+PLACE 2,5,NORTH (Ignored)
+PLACE 5,2,NORTH (Ignored)
+PLACE 1,2,LEFT (Ignored)
+PLACE 1,1,NORTH (Accepted)
+REPORT
+Expected Output: 1,1,NORTH
+
+3.)
+PLACE 0,0,NORTH
+LEFT
+REPORT
+Expected Output: 0,0,WEST
+LEFT
+REPORT
+Expected Output: 0,0,SOUTH
+LEFT
+REPORT
+Expected Output: 0,0,EAST
+LEFT
+REPORT
+Expected Output: 0,0,NORTH
