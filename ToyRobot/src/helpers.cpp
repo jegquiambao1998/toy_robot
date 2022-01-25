@@ -49,7 +49,6 @@ Commands convertStringToCommand(std::string command) {
 
         while (getline(iss, commandFragment, ',')) {
             placeValuesVector.push_back(commandFragment);
-            std::cout << commandFragment << std::endl;
         }
 
         if (placeValuesVector.size() != 3) return INVALID;

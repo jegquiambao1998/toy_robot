@@ -20,11 +20,11 @@ class Robot {
     protected:
 
     private:
-        void initializeRobot(int initialX, int initialY, Directions direction);
+        void initializeRobot(std::string placeCommand);
 
-        int x;
-        int y;
-        Directions direction;
+        int robotX;
+        int robotY;
+        Directions robotDirection;
 
         bool isRobotInitialized;
 };

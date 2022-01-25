@@ -1,8 +1,13 @@
+#include <cctype>
 #include <cstring>
 #include <iostream>
 
 #include "Robot.h"
 #include "helpers.cpp"
+
+using std::cout;
+using std::endl;
+using std::string;
 
 
 Robot::Robot() : isRobotInitialized(false) {
@@ -16,83 +21,107 @@ Robot::~Robot() {
 
 
 void Robot::displayCommandList() {
-    std::cout << "Command List:" << std::endl;
-    std::cout << "PLACE x,y,Direction" << std::endl;
-    std::cout << "MOVE" << std::endl;
-    std::cout << "LEFT" << std::endl;
-    std::cout << "RIGHT" << std::endl;
-    std::cout << "REPORT" << std::endl;
-    std::cout << "EXIT" << std::endl << std::endl;
+    cout << "Command List:"         << endl;
+    cout << "PLACE x,y,Direction"   << endl;
+    cout << "MOVE"                  << endl;
+    cout << "LEFT"                  << endl;
+    cout << "RIGHT"                 << endl;
+    cout << "REPORT"                << endl;
+    cout << "EXIT"                  << endl << endl;
 }
 
 
 void Robot::startProcess() {
-    std::cout << "Toy Robot" << std::endl << std::endl;
+    cout << "Toy Robot" << endl << endl;
     displayCommandList();
 
-    std::string inputtedCommand;
+    string inputtedCommand;
 
     while(true) {
-        std::cout << "Enter Command: ";
+        cout << "Enter Command: ";
         getline(std::cin >> std::ws, inputtedCommand);
 
         Commands command = convertStringToCommand(inputtedCommand);
 
         if (command == EXIT) {
-            std::cout << "Stopping Process..." << std::endl << std::endl;
+            cout << "Stopping Process..." << endl << endl;
             break;
         }
 
         if (command == INVALID) {
-            std::cout << "Command not recognized!" << std::endl << std::endl;
+            cout << "Command not recognized!" << endl << endl;
             continue;
         }
 
         if (!IsRobotInitialized() && (command != EXIT && command != PLACE)) {
-            std::cout << "Robot has not been placed on the table! Ignoring..." << std::endl << std::endl;
+            cout << "Robot has not been placed on the table! Ignoring..." << endl << endl;
             continue;
         }
 
         switch(command) {
             case PLACE:
-                std::cout << "PLACE";
+                initializeRobot(inputtedCommand);
                 break;
 
             case REPORT:
                 reportLocation();
                 break;
 
-            default: std::cout << "Invalid Command!" << std::endl << std::endl;
+            default: cout << "Invalid Command!" << endl << endl;
         }
     }
 }
 
 
-void Robot::reportLocation()
-{
-    std::cout << x << "," << y << "," << convertDirectionToString(direction);
+void Robot::reportLocation() {
+    cout << robotX << "," << robotY << "," << convertDirectionToString(robotDirection) << endl << endl;
 }
 
 
-void Robot::setIsRobotInitialized(bool _isRobotInitialized)
-{
+void Robot::setIsRobotInitialized(bool _isRobotInitialized) {
     isRobotInitialized = _isRobotInitialized;
 }
 
 
-bool Robot::IsRobotInitialized()
-{
+bool Robot::IsRobotInitialized() {
     return isRobotInitialized;
 }
 
 
-void Robot::initializeRobot(
-    int initialX,
-    int initialY,
-    Directions initialDirection
-)
-{
-    x = initialX;
-    y = initialY;
-    direction = initialDirection;
+void Robot::initializeRobot(string placeCommand) {
+    std::stringstream ss(placeCommand);
+    string placeCommandFragment;
+    std::vector<string> placeCommandVector;
+
+    while(ss >> placeCommandFragment) {
+        placeCommandVector.push_back(placeCommandFragment);
+    }
+
+    std::istringstream iss(placeCommandVector.at(1));
+    std::vector<string> placeValuesVector;
+
+    while (getline(iss, placeCommandFragment, ',')) {
+        placeValuesVector.push_back(placeCommandFragment);
+    }
+
+    string strInitialX = placeValuesVector.at(0);
+    string strInitialY = placeValuesVector.at(1);
+    Directions initialDirection = convertStringToDirection(placeValuesVector.at(2));
+
+    if (std::isdigit(strInitialX[0]) && std::isdigit(strInitialY[0]) && (initialDirection != NONE)) {
+        int x = std::stoi(strInitialX);
+        int y = std::stoi(strInitialY);
+
+        if ((x > TABLE_X || x < 0) && (y > TABLE_Y || y < 0)) {
+            cout << "Invalid coordinates!" << endl << endl;
+        } else {
+            robotX = x;
+            robotY = y;
+            robotDirection = initialDirection;
+
+            setIsRobotInitialized(true);
+        }
+    } else {
+        cout << "Malformed PLACE command!" << endl << endl;
+    }
 }

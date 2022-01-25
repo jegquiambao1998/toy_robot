@@ -2,7 +2,7 @@
 #define CONSTANTS_H
 
 const int TABLE_X = 5;
-const int TABLE_Y= 5;
+const int TABLE_Y = 5;
 
 enum Directions {
     NORTH,
