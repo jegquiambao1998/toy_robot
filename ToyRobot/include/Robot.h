@@ -21,6 +21,9 @@ class Robot {
 
     private:
         void initializeRobot(std::string placeCommand);
+        void moveRobot();
+        void rotateRobotLeft();
+        void rotateRobotRight();
 
         int robotX;
         int robotY;

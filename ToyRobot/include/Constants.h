@@ -1,8 +1,8 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
-const int TABLE_X = 5;
-const int TABLE_Y = 5;
+const int TABLE_MAX_X = 4;
+const int TABLE_MAX_Y = 4;
 
 enum Directions {
     NORTH,

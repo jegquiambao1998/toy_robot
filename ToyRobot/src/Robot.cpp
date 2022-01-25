@@ -63,6 +63,18 @@ void Robot::startProcess() {
                 initializeRobot(inputtedCommand);
                 break;
 
+            case MOVE:
+                moveRobot();
+                break;
+
+            case LEFT:
+                rotateRobotLeft();
+                break;
+
+            case RIGHT:
+                rotateRobotRight();
+                break;
+
             case REPORT:
                 reportLocation();
                 break;
@@ -108,11 +120,14 @@ void Robot::initializeRobot(string placeCommand) {
     string strInitialY = placeValuesVector.at(1);
     Directions initialDirection = convertStringToDirection(placeValuesVector.at(2));
 
-    if (std::isdigit(strInitialX[0]) && std::isdigit(strInitialY[0]) && (initialDirection != NONE)) {
+    bool isXAllDigits = all_of(strInitialX.begin(), strInitialX.end(), [](char c){ return std::isdigit(c); });
+    bool isYAllDigits = all_of(strInitialY.begin(), strInitialY.end(), [](char c){ return std::isdigit(c); });
+
+    if (isXAllDigits && isYAllDigits && (initialDirection != NONE)) {
         int x = std::stoi(strInitialX);
         int y = std::stoi(strInitialY);
 
-        if ((x > TABLE_X || x < 0) && (y > TABLE_Y || y < 0)) {
+        if ((x > TABLE_MAX_X || x < 0) && (y > TABLE_MAX_Y || y < 0)) {
             cout << "Invalid coordinates!" << endl << endl;
         } else {
             robotX = x;
@@ -123,5 +138,33 @@ void Robot::initializeRobot(string placeCommand) {
         }
     } else {
         cout << "Malformed PLACE command!" << endl << endl;
+    }
+}
+
+void Robot::moveRobot() {
+    if (robotDirection == NORTH && robotY != TABLE_MAX_Y) ++robotY;
+    else if (robotDirection == SOUTH && robotY != 0) --robotY;
+    else if (robotDirection == EAST && robotX != TABLE_MAX_X) ++robotX;
+    else if (robotDirection == WEST && robotX != 0) --robotX;
+    else cout << "Robot will fall off the table! Ignoring..." << endl << endl;
+}
+
+void Robot::rotateRobotLeft() {
+    switch(robotDirection) {
+        case NORTH: robotDirection = WEST;  break;
+        case WEST:  robotDirection = SOUTH; break;
+        case SOUTH: robotDirection = EAST;  break;
+        case EAST:  robotDirection = NORTH; break;
+        case NONE:  cout << "Robot is not placed properly!" << endl << endl; break;
+    }
+}
+
+void Robot::rotateRobotRight() {
+    switch(robotDirection) {
+        case NORTH: robotDirection = EAST;  break;
+        case EAST:  robotDirection = SOUTH; break;
+        case SOUTH: robotDirection = WEST;  break;
+        case WEST:  robotDirection = NORTH; break;
+        case NONE:  cout << "Robot is not placed properly!" << endl << endl; break;
     }
 }
