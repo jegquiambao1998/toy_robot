@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1643098153 source:c:\anemm\projects\toy_robot\toyrobot\main.cpp
+	<bits/stdc++.h>
+	<Robot.h>
+
+1643096398 c:\anemm\projects\toy_robot\toyrobot\include\robot.h
+	<string>
+	"Constants.h"
+
+1643111042 source:c:\anemm\projects\toy_robot\toyrobot\src\robot.cpp
+	<cstring>
+	<iostream>
+	"Robot.h"
+	"helpers.cpp"
+
+1643101964 c:\anemm\projects\toy_robot\toyrobot\include\constants.h
+
+1643066157 source:c:\anemm\projects\toy_robot\toyrobot\src\helpers.cpp
+	<string>
+	"Constants.h"
+
+1643111777 c:\anemm\projects\toy_robot\toyrobot\src\helpers.cpp
+	<algorithm>
+	<string>
+	<sstream>
+	<vector>
+	"Constants.h"
+
