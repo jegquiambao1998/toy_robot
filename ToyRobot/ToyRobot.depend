@@ -3,26 +3,346 @@
 	<bits/stdc++.h>
 	<Robot.h>
 
-1643146585 c:\anemm\projects\toy_robot\toyrobot\include\robot.h
+1643161853 c:\anemm\projects\toy_robot\toyrobot\include\robot.h
 	<string>
-	"Constants.h"
+	<Constants.h>
 
-1643111042 source:c:\anemm\projects\toy_robot\toyrobot\src\robot.cpp
+1643161877 source:c:\anemm\projects\toy_robot\toyrobot\src\robot.cpp
+	<cctype>
 	<cstring>
 	<iostream>
-	"Robot.h"
+	<Robot.h>
 	"helpers.cpp"
 
 1643145586 c:\anemm\projects\toy_robot\toyrobot\include\constants.h
 
-1643066157 source:c:\anemm\projects\toy_robot\toyrobot\src\helpers.cpp
-	<string>
-	"Constants.h"
-
-1643111777 c:\anemm\projects\toy_robot\toyrobot\src\helpers.cpp
+1643133828 source:c:\anemm\projects\toy_robot\toyrobot\src\helpers.cpp
 	<algorithm>
 	<string>
 	<sstream>
 	<vector>
 	"Constants.h"
+
+1643133828 c:\anemm\projects\toy_robot\toyrobot\src\helpers.cpp
+	<algorithm>
+	<string>
+	<sstream>
+	<vector>
+	"Constants.h"
+
+1643161784 source:c:\anemm\projects\toy_robot\toyrobot\tests.cpp
+	<gtest/gtest.h>
+	<gmock/gmock.h>
+	<Robot.h>
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\gtest.h
+	<cstddef>
+	<limits>
+	<memory>
+	<ostream>
+	<type_traits>
+	<vector>
+	"gtest/gtest-assertion-result.h"
+	"gtest/gtest-death-test.h"
+	"gtest/gtest-matchers.h"
+	"gtest/gtest-message.h"
+	"gtest/gtest-param-test.h"
+	"gtest/gtest-printers.h"
+	"gtest/gtest-test-part.h"
+	"gtest/gtest-typed-test.h"
+	"gtest/gtest_pred_impl.h"
+	"gtest/gtest_prod.h"
+	"gtest/internal/gtest-internal.h"
+	"gtest/internal/gtest-string.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\gtest-assertion-result.h
+	<memory>
+	<ostream>
+	<string>
+	<type_traits>
+	"gtest/gtest-message.h"
+	"gtest/internal/gtest-port.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\gtest-message.h
+	<limits>
+	<memory>
+	<sstream>
+	"gtest/internal/gtest-port.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\internal\gtest-port.h
+	<ctype.h>
+	<stddef.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<cerrno>
+	<cstdint>
+	<iostream>
+	<limits>
+	<locale>
+	<memory>
+	<string>
+	<tuple>
+	<type_traits>
+	<vector>
+	<sys/types.h>
+	<sys/stat.h>
+	<AvailabilityMacros.h>
+	<TargetConditionals.h>
+	"gtest/internal/custom/gtest-port.h"
+	"gtest/internal/gtest-port-arch.h"
+	<direct.h>
+	<io.h>
+	<unistd.h>
+	<unistd.h>
+	<strings.h>
+	<android/api-level.h>
+	<regex.h>
+	<typeinfo>
+	<pthread.h>
+	<time.h>
+	<condition_variable>
+	<mutex>
+	"absl/types/any.h"
+	<any>
+	"absl/types/optional.h"
+	<optional>
+	"absl/strings/string_view.h"
+	<string_view>
+	"absl/types/variant.h"
+	<variant>
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\internal\custom\gtest-port.h
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\internal\gtest-port-arch.h
+	<winapifamily.h>
+	<TargetConditionals.h>
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\gtest-death-test.h
+	"gtest/internal/gtest-death-test-internal.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\internal\gtest-death-test-internal.h
+	"gtest/gtest-matchers.h"
+	"gtest/internal/gtest-internal.h"
+	<stdio.h>
+	<memory>
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\gtest-matchers.h
+	<atomic>
+	<memory>
+	<ostream>
+	<string>
+	<type_traits>
+	"gtest/gtest-printers.h"
+	"gtest/internal/gtest-internal.h"
+	"gtest/internal/gtest-port.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\gtest-printers.h
+	<functional>
+	<memory>
+	<ostream>
+	<sstream>
+	<string>
+	<tuple>
+	<type_traits>
+	<utility>
+	<vector>
+	"gtest/internal/gtest-internal.h"
+	"gtest/internal/gtest-port.h"
+	"gtest/internal/custom/gtest-printers.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\internal\gtest-internal.h
+	"gtest/internal/gtest-port.h"
+	<stdlib.h>
+	<sys/types.h>
+	<sys/wait.h>
+	<unistd.h>
+	<stdexcept>
+	<ctype.h>
+	<float.h>
+	<string.h>
+	<cstdint>
+	<iomanip>
+	<limits>
+	<map>
+	<set>
+	<string>
+	<type_traits>
+	<vector>
+	"gtest/gtest-message.h"
+	"gtest/internal/gtest-filepath.h"
+	"gtest/internal/gtest-string.h"
+	"gtest/internal/gtest-type-util.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\internal\gtest-filepath.h
+	"gtest/internal/gtest-string.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\internal\gtest-string.h
+	<mem.h>
+	<string.h>
+	<cstdint>
+	<string>
+	"gtest/internal/gtest-port.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\internal\gtest-type-util.h
+	"gtest/internal/gtest-port.h"
+	<cxxabi.h>
+	<acxx_demangle.h>
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\internal\custom\gtest-printers.h
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\gtest-param-test.h
+	<iterator>
+	<utility>
+	"gtest/internal/gtest-internal.h"
+	"gtest/internal/gtest-param-util.h"
+	"gtest/internal/gtest-port.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\internal\gtest-param-util.h
+	<ctype.h>
+	<cassert>
+	<iterator>
+	<memory>
+	<set>
+	<tuple>
+	<type_traits>
+	<utility>
+	<vector>
+	"gtest/internal/gtest-internal.h"
+	"gtest/internal/gtest-port.h"
+	"gtest/gtest-printers.h"
+	"gtest/gtest-test-part.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\gtest-test-part.h
+	<iosfwd>
+	<vector>
+	"gtest/internal/gtest-internal.h"
+	"gtest/internal/gtest-string.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\gtest-typed-test.h
+	"gtest/internal/gtest-internal.h"
+	"gtest/internal/gtest-port.h"
+	"gtest/internal/gtest-type-util.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\gtest_pred_impl.h
+	"gtest/gtest-assertion-result.h"
+	"gtest/internal/gtest-internal.h"
+	"gtest/internal/gtest-port.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googletest\include\gtest\gtest_prod.h
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googlemock\include\gmock\gmock.h
+	"gmock/gmock-actions.h"
+	"gmock/gmock-cardinalities.h"
+	"gmock/gmock-function-mocker.h"
+	"gmock/gmock-matchers.h"
+	"gmock/gmock-more-actions.h"
+	"gmock/gmock-more-matchers.h"
+	"gmock/gmock-nice-strict.h"
+	"gmock/internal/gmock-internal-utils.h"
+	"gmock/internal/gmock-port.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googlemock\include\gmock\gmock-actions.h
+	<errno.h>
+	<algorithm>
+	<functional>
+	<memory>
+	<string>
+	<tuple>
+	<type_traits>
+	<utility>
+	"gmock/internal/gmock-internal-utils.h"
+	"gmock/internal/gmock-port.h"
+	"gmock/internal/gmock-pp.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googlemock\include\gmock\internal\gmock-internal-utils.h
+	<stdio.h>
+	<ostream>
+	<string>
+	<type_traits>
+	<vector>
+	"gmock/internal/gmock-port.h"
+	"gtest/gtest.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googlemock\include\gmock\internal\gmock-port.h
+	<assert.h>
+	<stdlib.h>
+	<cstdint>
+	<iostream>
+	"gtest/internal/gtest-port.h"
+	"gmock/internal/custom/gmock-port.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googlemock\include\gmock\internal\custom\gmock-port.h
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googlemock\include\gmock\internal\gmock-pp.h
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googlemock\include\gmock\gmock-cardinalities.h
+	<limits.h>
+	<memory>
+	<ostream>
+	"gmock/internal/gmock-port.h"
+	"gtest/gtest.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googlemock\include\gmock\gmock-function-mocker.h
+	<type_traits>
+	<utility>
+	"gmock/gmock-spec-builders.h"
+	"gmock/internal/gmock-internal-utils.h"
+	"gmock/internal/gmock-pp.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googlemock\include\gmock\gmock-spec-builders.h
+	<functional>
+	<map>
+	<memory>
+	<set>
+	<sstream>
+	<string>
+	<type_traits>
+	<utility>
+	<vector>
+	"gmock/gmock-actions.h"
+	"gmock/gmock-cardinalities.h"
+	"gmock/gmock-matchers.h"
+	"gmock/internal/gmock-internal-utils.h"
+	"gmock/internal/gmock-port.h"
+	"gtest/gtest.h"
+	<stdexcept>
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googlemock\include\gmock\gmock-matchers.h
+	<algorithm>
+	<cmath>
+	<initializer_list>
+	<iterator>
+	<limits>
+	<memory>
+	<ostream>
+	<sstream>
+	<string>
+	<type_traits>
+	<utility>
+	<vector>
+	"gmock/internal/gmock-internal-utils.h"
+	"gmock/internal/gmock-port.h"
+	"gmock/internal/gmock-pp.h"
+	"gtest/gtest.h"
+	"gmock/internal/custom/gmock-matchers.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googlemock\include\gmock\internal\custom\gmock-matchers.h
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googlemock\include\gmock\gmock-more-actions.h
+	<memory>
+	<utility>
+	"gmock/gmock-actions.h"
+	"gmock/internal/gmock-port.h"
+	"gmock/internal/custom/gmock-generated-actions.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googlemock\include\gmock\internal\custom\gmock-generated-actions.h
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googlemock\include\gmock\gmock-more-matchers.h
+	"gmock/gmock-matchers.h"
+
+1643039212 c:\anemm\projects\toy_robot\gtest\googlemock\include\gmock\gmock-nice-strict.h
+	<type_traits>
+	"gmock/gmock-spec-builders.h"
+	"gmock/internal/gmock-port.h"
 
